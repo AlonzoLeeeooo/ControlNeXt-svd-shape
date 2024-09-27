@@ -101,7 +101,7 @@ python train_svd.py --pretrained_model_name_or_path checkpoints/svd_xt_1.1 --tra
 # Sampling
 Once the ControlNeXt model is trained, you can inference it with the following command line:
 ```bash
-python inference_svd.py ----pretrained_model_name_or_path SVD_CHECKPOINTS_PATH --validation_control_images_folder INPUT_CONDITIONS_PATH --output_dir OUTPUT_PATH --checkpoint_dir CONTROLNEXT_PATH
+python inference_svd.py --pretrained_model_name_or_path SVD_CHECKPOINTS_PATH --validation_control_images_folder INPUT_CONDITIONS_PATH --output_dir OUTPUT_PATH --checkpoint_dir CONTROLNEXT_PATH --ref_image_path REFERENCE_IMAGE_PATH
 ```
 Note that the code differs from the official implementation that you do not need to merge the DeepSpeed checkpoint by running an additional script. All you need is to configure `--checkpoint_dir`.
 Normally, a checkpoint saved with the `DeepSpeed` engine should have similar structures as follows:
@@ -118,7 +118,7 @@ checkpoints
 You need to configure `--checkpoint_dir checkpoints/pytorch_model/mp_rank_00_model_states.pt`, and allow the script to automatically convert the checkpoint to the format of `pytorch_model.bin`.
 You can refer to the following example command line:
 ```bash
-python inference_svd.py --pretrained_model_name_or_path checkpoints/svd_xt_1.1 --validation_control_images_folder examples/frames/car --output_dir outputs/inference --checkpoint_dir checkpoints/pytorch_model/mp_rank_00_model_states.pt
+python inference_svd.py --pretrained_model_name_or_path checkpoints/svd_xt_1.1 --validation_control_images_folder examples/frames/car --output_dir outputs/inference --checkpoint_dir checkpoints/pytorch_model/mp_rank_00_model_states.pt --ref_image_path examples/frames/car/00000.png
 ```
 
 [<u><small><🎯Back to Table of Contents></small></u>](#table-of-contents)
