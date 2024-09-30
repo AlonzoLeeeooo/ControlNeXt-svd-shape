@@ -31,7 +31,7 @@ If you have any suggestions about this repo, please feel free to [start a new is
 # To-Do List
 - [x] Update basic documents
 - [x] Update training and inference code
-- [ ] Update pre-trained model weights
+- [x] Update pre-trained model weights
 - Regular Maintainence
 
 [<u><small><🎯Back to Table of Contents></small></u>](#table-of-contents)
@@ -77,7 +77,7 @@ For optimization, the trainable parameters contain all `to_k` and `to_v` linear 
 pip install -r requirements.txt
 ```
 2. Download YouTube-VOS from [this link](https://codalab.lisn.upsaclay.fr/competitions/7685#participate-get_data) to prepare the training data.
-3. To prepare the pre-trained model weights of Stable Video Diffusion, you can download the model weights from our [Hugging Face repo](https://huggingface.co/AlonzoLeeeooo/ControlNeXt-svd-shape/tree/main).
+3. To prepare the pre-trained model weights of Stable Video Diffusion from [this link](https://huggingface.co/stabilityai/stable-video-diffusion-img2vid-xt-1-1/tree/main). For our pre-trained ControlNeXt and U-net weights, you can refer to our [HuggingFace repo](https://huggingface.co/AlonzoLeeeooo/ControlNeXt-svd-shape/tree/main).
 
 [<u><small><🎯Back to Table of Contents></small></u>](#table-of-contents)
 
